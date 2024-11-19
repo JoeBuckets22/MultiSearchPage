@@ -1,44 +1,41 @@
-﻿body {
-    font-family: Arial, sans-serif;
+/* General Styles */
+body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100vw;
     height: 100vh;
-    background-color: #f5f5f5;
+    overflow: hidden; /* Prevent scrolling */
+    background-color: mintcream;
 }
 
-.search-container {
-    width: 90%;
-    max-width: 400px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
+/* Style for search bars */
 .search-bar {
-    width: 100%;
+    width: 80%; /* Adjust width for mobile responsiveness */
+    max-width: 400px; /* Prevent it from being too wide on larger screens */
+    margin: 10px 0;
+    border-radius: 20px;
     padding: 10px;
-    font-size: 16px;
-    border-radius: 25px;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
-    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Style for search buttons */
 .search-button {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
     border: none;
-    cursor: pointer;
+    border-radius: 50%;
+    margin-top: 10px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-    margin: 0 auto;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .duckduckgo {
@@ -54,4 +51,22 @@
 .chatgpt {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg');
     background-color: #34a853;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column; /* Stack items vertically */
+        padding: 0;
+    }
+
+    .search-bar {
+        width: 90%; /* Take most of the screen width on small devices */
+        max-width: none;
+    }
+
+    .search-button {
+        width: 40px;
+        height: 40px;
+    }
 }
